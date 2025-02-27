@@ -5,4 +5,4 @@ scikit-learn
 tensorboadrd
 matplotlib
 streamlit
-scikeras
+keras-tuner
