@@ -51,7 +51,8 @@ geo_encoded = onehot_geo_encoder.transform([[geography]]).toarray()
 geo_encoded_df = pd.DataFrame(geo_encoded, columns=onehot_geo_encoder.get_feature_names_out(['Geography']))
 # combining encoded col to input data
 input_data = pd.concat([input_data.reset_index(drop=True), geo_encoded_df], axis=1)
-input_data = gender_encoder.transform(input_data['Gender'])
+input_data['Gender'] = gender_encoder.transform(input_data[['Gender']])
+
 
 # scale data
 input_data_scaled = scaler.transform(input_data)
