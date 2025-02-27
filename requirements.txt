@@ -2,7 +2,6 @@ tensorflow
 pandas
 numpy
 scikit-learn
-tensorboadrd
 matplotlib
 streamlit
 keras-tuner
